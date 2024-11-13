@@ -89,6 +89,7 @@ const checkwin = () => {
             let winner = boxtext[e[0]].innerText === objecte.yourchoice ? objecte.yourname : objecte.opponentname// it will give the winner name based on input
 
             document.querySelector('.info').innerText = winner + " won "
+             speakwinnername(winner);
 
             isgameover = true;// after that the winner is final and both the user can not select the x o after the checkwin call 
             scoreupdate(winner);// after winner the scoreupdate is updated ;
@@ -244,7 +245,15 @@ function scoreupdate(winner) {
 }
 
 
+ function speakwinnername( winner){
 
+   
+    const speak= new SpeechSynthesisUtterance(winner+'won');// this gets the text read or  get  by  speechsynthesisutterance a web speech  api to represents a speech request 
+   
+    window.speechSynthesis.speak(speak);// speechsynthesis integrate web to speech 
+
+
+ }
 
 
 
