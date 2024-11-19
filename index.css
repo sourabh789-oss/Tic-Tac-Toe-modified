@@ -46,6 +46,10 @@ body::-webkit-scrollbar{
    height: 2vh; */
    padding: 2vh 12vw;
    box-sizing: border-box;
+   outline: none;
+   border: 1px solid  gray;
+   
+   
    
    }
 
@@ -346,13 +350,19 @@ canvas {
 }
  
 label{
-    font-size: 2.2vw;
+    font-size: 2.5vw;
     font-weight: bolder;
 }
 
 #sub{
     font-size: 2vw;
     padding: 9px 63px;
+}
+
+form input{
+
+  color:black;
+  font-weight: bolder;
 }
 }
 
